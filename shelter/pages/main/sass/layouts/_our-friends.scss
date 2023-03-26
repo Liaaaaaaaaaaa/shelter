@@ -1,0 +1,62 @@
+.our-friends {
+    background: $color-light-l;
+    padding: 80px 0 100px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+    }
+
+}
+
+.our-friends__title {
+    max-width: 400px;
+    letter-spacing: 0.06em;
+    color: $color-dark-l;
+    text-align: center;
+}
+
+.slider-container {
+    display: flex;
+    gap: 53px;
+    align-items: center;
+}
+
+
+.friends-container {
+    display: flex;
+    gap: 90px;
+}
+
+.friend {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border-radius: 9px;
+    background: $color-light-s;
+    align-items: center;
+    padding-bottom: 30px;
+
+    &__img1 {
+        background: url(../../../assets/img/pets-katrine.jpg);
+        @extend %friend-img;
+    }
+
+    &__img2 {
+        background: url(../../../assets/img/pets-jennifer.jpg);
+        @extend %friend-img;
+    }
+
+    &__img3 {
+        background: url(../../../assets/img/pets-woody.jpg);
+        @extend %friend-img;
+    }
+
+
+    &__name {
+        letter-spacing: 0.06em;
+        color: $color-dark-l;
+    }
+}

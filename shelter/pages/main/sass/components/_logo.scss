@@ -13,5 +13,5 @@
 .logo__text {
     @include font($family: $font-family-p, $size: 13px, $line-height: 15px);
     letter-spacing: 0.1em;
-    color: $color-text-light;
+    color: $color-light;
 }

@@ -1,17 +1,36 @@
 .about {
-    background: $color-text-light;
+    background: $color-light;
+    padding: 80px 0 100px;
+
+    &__container {
+        display: flex;
+        gap: 120px;
+        justify-content: space-between;
+        padding: 0 175px 0;
+    }
+
 }
-// .wrapper {
-// }
-// .about__img {
-// }
-// .about__text-container {
-// }
-// .about__title {
-// }
-// .paragraph-l {
-// }
-// .about__text1 {
-// }
-// .about__text2 {
-// }
+
+.about__img {
+    background: url(../../../assets/img/about-pets.jpg);
+    width: 300px;
+    height: 408px;
+
+}
+
+.about__text-container {
+    max-width: 430px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    .about__title {
+        letter-spacing: 0.06em;
+        color: #545454;
+        padding-right: 60px;
+    }
+
+    .about__text {
+        color: #4C4C4C;
+    }
+}

@@ -6,6 +6,7 @@
 @import "abstract/width";
 @import "abstract/constants";
 @import "abstract/mixins";
+@import "abstract/placeholders";
 
 //base
 @import "base/base";
@@ -20,3 +21,7 @@
 @import "layouts/header";
 @import "layouts/not-only";
 @import "layouts/about";
+@import "layouts/our-friends";
+@import "layouts/help";
+@import "layouts/addition";
+@import "layouts/footer";

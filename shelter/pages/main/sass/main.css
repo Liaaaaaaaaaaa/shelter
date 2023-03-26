@@ -319,6 +319,30 @@ section, main, footer, nav, article, header {
   box-sizing: border-box;
 }
 
+.friend__img3, .friend__img2, .friend__img1 {
+  height: 270px;
+  width: 270px;
+  border-radius: 9px 9px 0px 0px;
+}
+
+.icon__img9, .icon__img8, .icon__img7, .icon__img6, .icon__img5, .icon__img4, .icon__img3, .icon__img2, .icon__img1 {
+  width: 60px;
+  height: 60px;
+}
+
+.footer__item2, .footer__item1 {
+  padding: 16px 0 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+
+.phone__icon, .adress__icon, .mail__icon {
+  width: 40px;
+  height: 32px;
+  margin-right: 20px;
+}
+
 html {
   font-size: 10px;
   scroll-behavior: smooth;
@@ -435,19 +459,42 @@ li {
   border-bottom: 3px solid #F1CDB3;
 }
 
-.not-only__button {
-  width: 207px;
-  height: 52px;
-  padding: 15px 45px;
-  background: #F1CDB3;
+.button {
+  background: inherit;
   border-radius: 100px;
-  border: none;
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
   font-size: 17px;
   line-height: 22px;
   color: #292929;
+}
+.button__not-only {
+  width: 207px;
+  height: 52px;
+  padding: 15px 45px;
+  border: none;
+  background: #F1CDB3;
+}
+.button_switch {
+  width: 52px;
+  height: 52px;
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  text-align: center;
+}
+.button__friend {
+  width: 187px;
+  height: 52px;
+  border: 2px solid #F1CDB3;
+  letter-spacing: 0.06em;
+}
+.button__our-friend {
+  width: 261px;
+  height: 52px;
+  background: #F1CDB3;
+  border: none;
+  letter-spacing: 0.06em;
 }
 
 .header {
@@ -468,8 +515,7 @@ li {
   background-position: bottom;
   padding-top: 90px;
 }
-
-.not-only__container {
+.not-only .not-only__container {
   display: flex;
   justify-content: space-between;
 }
@@ -499,6 +545,266 @@ li {
 
 .about {
   background: #FFFFFF;
+  padding: 80px 0 100px;
+}
+.about__container {
+  display: flex;
+  gap: 120px;
+  justify-content: space-between;
+  padding: 0 175px 0;
+}
+
+.about__img {
+  background: url(../../../assets/img/about-pets.jpg);
+  width: 300px;
+  height: 408px;
+}
+
+.about__text-container {
+  max-width: 430px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.about__text-container .about__title {
+  letter-spacing: 0.06em;
+  color: #545454;
+  padding-right: 60px;
+}
+.about__text-container .about__text {
+  color: #4C4C4C;
+}
+
+.our-friends {
+  background: #F6F6F6;
+  padding: 80px 0 100px;
+}
+.our-friends__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+.our-friends__title {
+  max-width: 400px;
+  letter-spacing: 0.06em;
+  color: #545454;
+  text-align: center;
+}
+
+.slider-container {
+  display: flex;
+  gap: 53px;
+  align-items: center;
+}
+
+.friends-container {
+  display: flex;
+  gap: 90px;
+}
+
+.friend {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-radius: 9px;
+  background: #FAFAFA;
+  align-items: center;
+  padding-bottom: 30px;
+}
+.friend__img1 {
+  background: url(../../../assets/img/pets-katrine.jpg);
+}
+.friend__img2 {
+  background: url(../../../assets/img/pets-jennifer.jpg);
+}
+.friend__img3 {
+  background: url(../../../assets/img/pets-woody.jpg);
+}
+.friend__name {
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+.help {
+  background: #FFFFFF;
+  padding: 80px 0 100px;
+}
+
+.help__title {
+  margin: 0 auto;
+  max-width: 308px;
+  padding-bottom: 60px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+.help__icons-container {
+  display: flex;
+  padding: 0 87px;
+  flex-wrap: wrap;
+  row-gap: 55px;
+  column-gap: 119px;
+  justify-content: center;
+}
+
+.help-icons {
+  max-height: 113px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.icon__img1 {
+  background: url(../../../assets/icon/icon-pet-food.svg);
+}
+
+.icon__text {
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+.icon__img2 {
+  background: url(../../../assets/icon/icon-transportation.svg);
+}
+
+.icon__img3 {
+  background: url(../../../assets/icon/icon-toys.svg);
+}
+
+.icon__img4 {
+  background: url(../../../assets/icon/icon-bowls-and-cups.svg);
+}
+
+.icon__img5 {
+  background: url(../../../assets/icon/icon-shampoos.svg);
+}
+
+.icon__img6 {
+  background: url(../../../assets/icon/icon-vitamins.svg);
+}
+
+.icon__img7 {
+  background: url(../../../assets/icon/icon-medicines.svg);
+}
+
+.icon__img8 {
+  background: url(../../../assets/icon/icon-collars-leashes.svg);
+}
+
+.icon__img9 {
+  background: url(../../../assets/icon/icon-sleeping-area.svg);
+}
+
+.addition {
+  background: #F6F6F6;
+  padding: 80px 100px;
+}
+
+.addition__container {
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
+}
+
+.addition__img {
+  background: url(../../../assets/img/addition.png);
+  width: 505px;
+  height: 261px;
+}
+
+.addition__text-container {
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.addition__title {
+  max-width: 300px;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+.addition__subtitle {
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+.addition__card-container {
+  display: flex;
+  gap: 15px;
+  max-width: 349px;
+  padding: 10px 15px;
+  background: #F1CDB3;
+  border-radius: 9px;
+  letter-spacing: 0.06em;
+}
+
+.card__icon {
+  background: url(../../../assets/icon/credit-card.svg);
+  width: 30px;
+  height: 23px;
+}
+
+.card__number {
+  color: #545454;
+}
+
+.addition__text {
+  color: #B2B2B2;
+}
+
+footer {
+  background: radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+  padding-top: 40px;
+}
+
+.footer__container {
+  display: flex;
+  column-gap: 160px;
+}
+
+.footer__item1 {
+  max-width: 278px;
+}
+
+.footer__item2 {
+  max-width: 302px;
+}
+
+.title__container {
+  color: #FFFFFF;
+}
+
+.footer-item__container {
+  display: flex;
+  align-items: center;
+}
+
+.mail__icon {
+  background: url(../../../assets/icon/icon-email.svg) no-repeat;
+}
+
+.footer__text {
+  color: #F1CDB3;
+}
+
+.adress__icon {
+  background: url(../../../assets/icon/icon-marker.svg) no-repeat;
+}
+
+.phone__icon {
+  background: url(../../../assets/icon/icon-phone.svg) no-repeat;
+}
+
+.footer__img {
+  background: url(../../../assets/img/footer-puppy.png) no-repeat;
+  width: 300px;
+  height: 310px;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,59 @@
+.addition {
+    background: $color-light-l;
+    padding: 80px 100px;
+}
+
+.addition__container {
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+    // padding: 0 142px;
+}
+
+.addition__img {
+    background: url(../../../assets/img/addition.png);
+    width: 505px;
+    height: 261px;
+    // margin-right: 30px;
+}
+
+.addition__text-container {
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.addition__title {
+    max-width: 300px;
+    letter-spacing: 0.06em;
+    color: $color-dark-l;
+}
+
+.addition__subtitle {
+    letter-spacing: 0.06em;
+    color: $color-dark-l;
+}
+
+.addition__card-container {
+    display: flex;
+    gap:15px;
+    max-width: 349px;
+    padding: 10px 15px;
+    background: $color-primary;
+    border-radius: 9px;
+    letter-spacing: 0.06em;
+}
+
+.card__icon {
+    background: url(../../../assets/icon/credit-card.svg);
+    width: 30px;
+    height: 23px;
+}
+
+.card__number {
+    color: $color-dark-l;
+}
+.addition__text {
+    color: $color-dark-m;
+}

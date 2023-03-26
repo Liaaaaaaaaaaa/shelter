@@ -3,6 +3,7 @@
     border-radius: 100px;
     @include font($family: $font-family-title, $size: 17px, $line-height: 22px);
     color: $color-dark-3xl;
+    @extend %transition;
 
     &__not-only {
         width: 207px;
@@ -38,4 +39,9 @@
         letter-spacing: 0.06em;
     }
 
+    &:hover {
+        background: $color-primary-light;
+        border: none;
+        cursor: pointer;
+    }
 }

@@ -343,6 +343,10 @@ section, main, footer, nav, article, header {
   margin-right: 20px;
 }
 
+.friend, .button, .nav .nav-item {
+  transition: all 0.3s ease-in-out;
+}
+
 html {
   font-size: 10px;
   scroll-behavior: smooth;
@@ -454,6 +458,13 @@ li {
 .nav .nav-item {
   color: #CDCDCD;
 }
+.nav .nav-item:hover {
+  color: #FAFAFA;
+}
+.nav .nav-item:active {
+  color: #FAFAFA;
+  border-bottom: 3px solid #F1CDB3;
+}
 .nav .link_nav-active {
   color: #FAFAFA;
   border-bottom: 3px solid #F1CDB3;
@@ -495,6 +506,11 @@ li {
   background: #F1CDB3;
   border: none;
   letter-spacing: 0.06em;
+}
+.button:hover {
+  background: #FDDCC4;
+  border: none;
+  cursor: pointer;
 }
 
 .header {
@@ -612,6 +628,14 @@ li {
   background: #FAFAFA;
   align-items: center;
   padding-bottom: 30px;
+  cursor: pointer;
+}
+.friend:hover {
+  background: #FFFFFF;
+}
+.friend:hover .button__friend {
+  background: #FDDCC4;
+  border: none;
 }
 .friend__img1 {
   background: url(../../../assets/img/pets-katrine.jpg);

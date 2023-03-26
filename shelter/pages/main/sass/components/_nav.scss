@@ -6,11 +6,21 @@
 
     .nav-item {
         color: $color-dark-s;
+        @extend %transition;
 
+        &:hover {
+            color: $color-light-s;
+        }
+
+        &:active {
+            color: $color-light-s;
+            border-bottom: 3px solid $color-primary;
+        }
     }
 
     .link_nav-active {
         color: $color-light-s;
         border-bottom: 3px solid $color-primary;
+
     }
 }

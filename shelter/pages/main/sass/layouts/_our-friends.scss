@@ -38,6 +38,17 @@
     background: $color-light-s;
     align-items: center;
     padding-bottom: 30px;
+    cursor: pointer;
+    @extend %transition;
+
+    &:hover  {
+        background: $color-light; 
+    }
+
+    &:hover  .button__friend {
+        background: $color-primary-light;
+        border: none;
+    }
 
     &__img1 {
         background: url(../../../assets/img/pets-katrine.jpg);

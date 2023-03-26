@@ -1,0 +1,55 @@
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Arial', Verdana, sans-serif;
+    background-image: $background-start-screen-gradient;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1{
+   @include font($family: $font-family-title, $size: 3.2rem, $line-height: 35px); 
+}
+
+h2{
+    @include font($family: $font-family-title, $size: 4.4rem, $line-height: 57px);
+    // letter-spacing: 0.06em;
+}
+
+h3 {
+    @include font($family: $font-family-title, $size: 3.5rem, $line-height: 45px);
+    // letter-spacing: 0.06em;
+}
+h4 {
+    @include font ($family: $font-family-title, $size: 2rem, $line-height: 23px);
+    // letter-spacing: 0.06em;
+}
+
+h5 {
+    @include font($family: $font-family-title, $size: 1.5rem, $line-height: 17px);
+    // letter-spacing: 0.06em;
+}
+
+
+.paragraph-l {
+    @include font ($family: $font-family-p, $size: 1.5rem, $line-height: 24px);
+}
+
+.paragraph-s {
+    @include font ($family: $font-family-p, $size: 1.2rem, $line-height:18px, $weight: 400, $style: italic);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li{
+    list-style: none;
+}

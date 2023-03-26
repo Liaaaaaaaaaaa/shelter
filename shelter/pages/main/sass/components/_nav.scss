@@ -1,0 +1,16 @@
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    padding: 0;
+
+    .nav-item {
+        color: $color-dark-s;
+
+    }
+
+    .link_nav-active {
+        color: $color-light-s;
+        border-bottom: 3px solid $color-primary;
+    }
+}

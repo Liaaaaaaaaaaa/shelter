@@ -1,0 +1,20 @@
+.header {
+    // background: $background-start-screen-gradient;
+    // background: inherit;
+    padding-top: 30px;
+    // position: relative;
+    // top: 90px;
+    
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+//     position: relative;
+//    top: 90px;
+}
+
+.header-nav {
+    display: inline-block;
+
+}

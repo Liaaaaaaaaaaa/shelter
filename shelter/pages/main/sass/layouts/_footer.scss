@@ -9,7 +9,7 @@ footer {
 }
 
 .footer__item1 {
-    max-width: 278px;
+    max-width: 280px;
     @extend %footer__item;
 }
 
@@ -21,6 +21,7 @@ footer {
 
 .title__container {
     color: $color-light;
+    letter-spacing: 0.06em;
 }
 
 
@@ -37,16 +38,20 @@ footer {
 .mail__icon {
     background: url(../../../assets/icon/icon-email.svg) no-repeat;
     @extend %footer__icon;
+    margin: 8px 20px 8px 0;
 }
 
 .footer__text {
     color: $color-primary;
+    letter-spacing: 0.06em;
 }
 
 
 .adress__icon {
     background: url(../../../assets/icon/icon-marker.svg) no-repeat;
     @extend %footer__icon;
+    margin-right: 0px;
+
 }
 
 

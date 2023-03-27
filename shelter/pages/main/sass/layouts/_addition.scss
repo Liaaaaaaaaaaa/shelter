@@ -1,6 +1,6 @@
 .addition {
     background: $color-light-l;
-    padding: 80px 100px;
+    padding: 80px 0 100px;
 }
 
 .addition__container {
@@ -11,6 +11,7 @@
 }
 
 .addition__img {
+    margin-top: 10px;
     background: url(../../../assets/img/addition.png);
     width: 505px;
     height: 261px;
@@ -58,6 +59,8 @@
 
 .card__number {
     color: $color-dark-l;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
 }
 
 .addition__text {

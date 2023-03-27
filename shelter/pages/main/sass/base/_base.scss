@@ -2,11 +2,12 @@ html {
     font-size: 10px;
     scroll-behavior: smooth;
 }
-
-body{
+body {
     font-family: 'Arial', Verdana, sans-serif;
+}
+
+.body_background {
     background-image: $background-start-screen-gradient;
-    
 }
 
 .wrapper {

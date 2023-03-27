@@ -5,13 +5,32 @@
     align-items: center;
 }
 
-.logo__title {
+.logo__title-light {
     color: $color-primary;
+    letter-spacing: 0.06em;
+}
+
+.logo__title-dark {
+    color: $color-dark-l;
     letter-spacing: 0.06em;
 }
 
 .logo__text {
     @include font($family: $font-family-p, $size: 13px, $line-height: 15px);
     letter-spacing: 0.1em;
+
+}
+
+.logo-text_light {
     color: $color-light;
 }
+
+.logo-text_dark {
+    color: $color-dark-3xl;
+}
+
+
+
+
+
+

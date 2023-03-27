@@ -13,17 +13,19 @@
 .logo__title-light {
     color: $color-primary;
     letter-spacing: 0.06em;
+    @extend %transition;
 }
 
 .logo__title-dark {
     color: $color-dark-l;
     letter-spacing: 0.06em;
+    @extend %transition;
 }
 
 .logo__text {
     @include font($family: $font-family-p, $size: 13px, $line-height: 15px);
     letter-spacing: 0.1em;
-
+    @extend %transition;
 }
 
 .logo-text_light {

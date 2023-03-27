@@ -19,6 +19,25 @@
         border: 2px solid $color-primary;
         border-radius: 100px;
         text-align: center;
+        @extend %transition;
+
+        &_active {
+            background: $color-primary;
+        }
+
+        &:hover {
+            background: $color-primary-light ;
+        }
+
+        &:active {
+            background: $color-primary;
+        }
+
+        &:disabled {
+            border: 2px solid $color-dark-s;
+            color: $color-dark-s;
+            pointer-events: none;
+        }
     }
 
     &__friend {
@@ -29,6 +48,7 @@
         height: 52px;
         border: 2px solid $color-primary;
         letter-spacing: 0.06em;
+        @extend %transition;
     }
 
     &__our-friend {
@@ -37,6 +57,7 @@
         background: $color-primary;
         border: none;
         letter-spacing: 0.06em;
+        @extend %transition;
     }
 
     &:hover {

@@ -3,6 +3,11 @@
     flex-direction: column;
     row-gap: 10px;
     align-items: center;
+    @extend %transition;
+    
+    &:hover * {
+       color: $color-dark-3xl;
+    }
 }
 
 .logo__title-light {

@@ -37,12 +37,17 @@
 
 .addition__card-container {
     display: flex;
-    gap:15px;
+    gap: 15px;
     max-width: 349px;
     padding: 10px 15px;
     background: $color-primary;
     border-radius: 9px;
     letter-spacing: 0.06em;
+    @extend %transition;
+
+    &:hover {
+        background: $color-primary-light;
+    }
 }
 
 .card__icon {
@@ -54,6 +59,7 @@
 .card__number {
     color: $color-dark-l;
 }
+
 .addition__text {
     color: $color-dark-m;
 }

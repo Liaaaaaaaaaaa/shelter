@@ -50,17 +50,17 @@
         border: none;
     }
 
-    &__img1 {
+    &__img-Katrine {
         background: url(../../../assets/img/pets-katrine.jpg);
         @extend %friend-img;
     }
 
-    &__img2 {
+    &__img-Jennifer {
         background: url(../../../assets/img/pets-jennifer.jpg);
         @extend %friend-img;
     }
 
-    &__img3 {
+    &__img-Woody {
         background: url(../../../assets/img/pets-woody.jpg);
         @extend %friend-img;
     }

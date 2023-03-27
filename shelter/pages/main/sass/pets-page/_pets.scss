@@ -1,0 +1,65 @@
+.pets {
+    background: $color-light-l;  
+}
+
+.pets__container {
+    padding: 80px 0 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 45px;
+}
+
+.pets__title {
+    max-width: 400px;
+    letter-spacing: 0.06em;
+    color: $color-dark-l;
+    text-align: center;
+}
+
+.slider-pets__container {
+    display: flex;
+    padding: 15px 0;
+    flex-wrap: wrap;
+    max-width: 100%;
+    justify-content: space-between;
+    row-gap: 30px;
+}
+
+.friend {
+    &__img-Sophia {
+        background: url(../../../assets/img/pets-sophia.jpg);
+        @extend %friend-img;
+    }
+
+    &__img-Timmy {
+        background: url(../../../assets/img/pets-timmy.png);
+        @extend %friend-img;
+    }
+
+    &__img-Charly {
+        background: url(../../../assets/img/pets-charly.jpg);
+        @extend %friend-img;
+    }
+
+    &__img-Scarlett {
+        background: url(../../../assets/img/pets-scarlet.png);
+        @extend %friend-img;
+    }
+
+    &__img-Freddie {
+        background: url(../../../assets/img/pets-freddie.png);
+        @extend %friend-img;
+    }
+
+
+}
+
+
+
+// .pagination {
+// }
+.pagination__container {
+    display: flex;
+    column-gap: 20px;
+}

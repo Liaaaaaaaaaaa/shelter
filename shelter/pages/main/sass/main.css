@@ -357,7 +357,7 @@ body {
 }
 
 .body_background {
-  background-image: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
+  background-image: url(../../../assets/icon/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
 }
 
 .wrapper {
@@ -507,10 +507,6 @@ li {
   pointer-events: none;
 }
 
-.nav-item_shadow {
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
 .button {
   background: inherit;
   border-radius: 100px;
@@ -553,6 +549,7 @@ li {
   width: 187px;
   height: 52px;
   border: 2px solid #F1CDB3;
+  outline: none;
   letter-spacing: 0.06em;
 }
 .button__our-friend {
@@ -563,8 +560,8 @@ li {
   letter-spacing: 0.06em;
 }
 .button:hover {
-  background: #FDDCC4;
   border: none;
+  background: #FDDCC4;
   cursor: pointer;
 }
 
@@ -582,7 +579,7 @@ li {
 }
 
 .not-only {
-  background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
+  background: url(../../../assets/icon/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
   background-position: bottom;
   padding-top: 60px;
 }

@@ -19,7 +19,6 @@
         border: 2px solid $color-primary;
         border-radius: 100px;
         text-align: center;
-        
         @extend %transition;
 
         &_active {
@@ -42,15 +41,15 @@
     }
 
     &__friend {
-        //     align-items: center;
-        // padding: 15px 45px;
-        // gap: 10px; 
         width: 187px;
         height: 52px;
         border: 2px solid $color-primary;
+        outline: none;
         letter-spacing: 0.06em;
-        @extend %transition;
+        @extend %transition; 
+
     }
+
 
     &__our-friend {
         width: 261px;
@@ -61,9 +60,14 @@
         @extend %transition;
     }
 
-    &:hover {
+    &:hover { 
+         border: none;
         background: $color-primary-light;
-        border: none;
         cursor: pointer;
     }
 }
+
+// .button__friend:hover {
+//     border:none;
+//     border:  $color-primary-light;
+// }

@@ -343,7 +343,7 @@ section, main, footer, nav, article, header {
   margin-right: 20px;
 }
 
-.footer-item__container, .addition__card-container, .friend, .button__our-friend, .button__friend, .button_switch, .button, .nav-item_dark, .nav-item_light, .logo__text, .logo__title-dark, .logo__title-light, .logo {
+.footer-item__container, .addition__card-container, .friend, .button__our-friend, .button_switch, .nav-item_dark, .nav-item_light, .logo__text, .logo__title-dark, .logo__title-light, .logo {
   transition: all 0.3s ease-in-out;
 }
 
@@ -516,6 +516,7 @@ li {
   font-size: 17px;
   line-height: 22px;
   color: #292929;
+  transition: background 0.3s ease-in-out;
 }
 .button__not-only {
   width: 207px;

@@ -3,7 +3,7 @@
     border-radius: 100px;
     @include font($family: $font-family-title, $size: 17px, $line-height: 22px);
     color: $color-dark-3xl;
-    @extend %transition;
+    transition: background 0.3s ease-in-out;
 
     &__not-only {
         width: 207px;
@@ -46,10 +46,9 @@
         border: 2px solid $color-primary;
         outline: none;
         letter-spacing: 0.06em;
-        @extend %transition; 
+        // @extend %transition; 
 
     }
-
 
     &__our-friend {
         width: 261px;

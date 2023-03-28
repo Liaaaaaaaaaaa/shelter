@@ -882,6 +882,7 @@ footer {
 .footer__text {
   color: #F1CDB3;
   letter-spacing: 0.06em;
+  text-align: center;
 }
 
 .adress__icon {

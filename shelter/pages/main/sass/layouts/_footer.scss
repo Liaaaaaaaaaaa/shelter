@@ -3,7 +3,7 @@ footer {
     padding-top: 40px;
 
     @include media-1250 {
-        padding-top: 30px; 
+        padding-top: 30px;
     }
 }
 
@@ -12,10 +12,10 @@ footer {
     column-gap: 160px;
 
     @include media-1250 {
-    flex-wrap: wrap;
-    row-gap: 65px;
-    justify-content: center;
-    column-gap: 60px;
+        flex-wrap: wrap;
+        row-gap: 65px;
+        justify-content: center;
+        column-gap: 60px;
     }
 }
 
@@ -76,4 +76,10 @@ footer {
     background: url(../../../assets/img/footer-puppy.png) no-repeat;
     width: 300px;
     height: 310px;
+
+    @include media-760 {
+        width: 260px;
+        height: 269px;
+        background-size: contain;
+    }
 }

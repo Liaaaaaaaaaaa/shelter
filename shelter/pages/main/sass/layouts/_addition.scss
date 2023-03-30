@@ -23,7 +23,13 @@
     height: 261px;
 
     @include media-1250 {
-        margin:0;
+        margin: 0;
+    }
+
+    @include media-760 {
+        width: 260px;
+        height: 135.2px;
+        background-size: contain;
     }
 }
 
@@ -54,6 +60,8 @@
     border-radius: 9px;
     letter-spacing: 0.06em;
     @extend %transition;
+
+   
 
     &:hover {
         background: $color-primary-light;

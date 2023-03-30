@@ -21,6 +21,10 @@
         text-align: center;
         @extend %transition;
 
+        @include media-760 {
+        order: 2;
+        }
+
         &_active {
             background: $color-primary;
         }

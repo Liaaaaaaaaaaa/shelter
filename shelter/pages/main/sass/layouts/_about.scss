@@ -7,15 +7,23 @@
         gap: 120px;
         justify-content: space-between;
         padding: 0 175px 0;
-    }
+        flex-wrap: wrap;
 
+        @include media-1250 {
+            flex-direction: column-reverse;
+            align-items: center;
+            padding:0;
+            max-width: 437px;
+            gap:80px;
+        }
+    }
 }
 
 .about__img {
-    background: url(../../../assets/img/about-pets.jpg);
+    background: url(../../../assets/img/about-pets.jpg) no-repeat;
     width: 300px;
     height: 408px;
-
+    background-size: contain;
 }
 
 .about__text-container {
@@ -24,6 +32,10 @@
     flex-direction: column;
     gap: 25px;
     padding-top: 14px;
+
+    @include media-1250 {
+        padding: 0;
+    }
 
     .about__title {
         letter-spacing: 0.06em;

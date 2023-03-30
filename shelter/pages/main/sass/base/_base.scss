@@ -15,6 +15,10 @@ body {
 .wrapper {
     max-width: 1200px;
     margin: auto;
+    
+    @include media-1250 {
+        max-width:708px; 
+    }
 }
 
 h1{

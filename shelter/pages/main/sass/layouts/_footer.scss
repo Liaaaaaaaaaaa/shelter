@@ -1,11 +1,22 @@
 footer {
     background: radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
     padding-top: 40px;
+
+    @include media-1250 {
+        padding-top: 30px; 
+    }
 }
 
 .footer__container {
     display: flex;
     column-gap: 160px;
+
+    @include media-1250 {
+    flex-wrap: wrap;
+    row-gap: 65px;
+    justify-content: center;
+    column-gap: 60px;
+    }
 }
 
 .footer__item1 {

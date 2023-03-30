@@ -3,6 +3,10 @@
     align-items: center;
     gap: 35px;
     padding: 3px;
+
+    // @include media-1250 {
+    // //    padding:0;
+    // }
 }
 
 .nav-item_light {

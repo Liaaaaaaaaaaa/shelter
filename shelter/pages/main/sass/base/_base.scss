@@ -2,6 +2,7 @@ html {
     font-size: 10px;
     scroll-behavior: smooth;
 }
+
 body {
     font-family: 'Arial', Verdana, sans-serif;
 }
@@ -9,26 +10,36 @@ body {
 .body_background {
     background-image: $background-start-screen-gradient;
     // background-image: url(../../../../assets/icon/noise_transparent@2x.png);
-   
+
 }
 
 .wrapper {
     max-width: 1200px;
     margin: auto;
-    
+
     @include media-1250 {
-        max-width:708px; 
+        max-width: 708px;
+    }
+    @include media-mobile {
+        max-width: 300px;
     }
 }
 
-h1{
-   @include font($family: $font-family-title, $size: 3.2rem, $line-height: 35px); 
+h1 {
+    @include font($family: $font-family-title, $size: 3.2rem, $line-height: 35px);
 }
 
-h2{
+h2 {
     @include font($family: $font-family-title, $size: 4.4rem, $line-height: 57px);
     // letter-spacing: 0.06em;
+
+    @include media-mobile {
+        font-size: 2.5rem;
+        line-height: 32px;
+    }
 }
+
+
 
 h3 {
     @include font($family: $font-family-title, $size: 3.5rem, $line-height: 45px);
@@ -38,11 +49,14 @@ h3 {
         @include font($family: $font-family-title, $size: 2.5rem, $line-height: 32px);
     }
 }
+
 h4 {
     @include font ($family: $font-family-title, $size: 2rem, $line-height: 23px);
-    @include media-760 {
-        @include font ($family: $font-family-title, $size: 1.5rem, $line-height: 17px);
-    }
+
+    // @include media-mobile 760 {
+    //     @include font ($family: $font-family-title, $size: 1.5rem, $line-height: 17px);
+    // }
+    
 }
 
 h5 {
@@ -56,7 +70,7 @@ h5 {
 }
 
 .paragraph-s {
-    @include font ($family: $font-family-p, $size: 1.2rem, $line-height:18px, $weight: 400, $style: italic);
+    @include font ($family: $font-family-p, $size: 1.2rem, $line-height: 18px, $weight: 400, $style: italic);
 }
 
 a {
@@ -64,6 +78,6 @@ a {
     color: inherit;
 }
 
-li{
+li {
     list-style: none;
 }

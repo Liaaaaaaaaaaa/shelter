@@ -17,6 +17,10 @@ footer {
         justify-content: center;
         column-gap: 60px;
     }
+    @include media-760 {
+        row-gap: 40px;
+        text-align: center;
+    }
 }
 
 .footer__item1 {
@@ -27,12 +31,21 @@ footer {
 .footer__item2 {
     max-width: 302px;
     @extend %footer__item;
+
+    @include media-760{
+        align-items: center;
+        row-gap: 40px;
+    }
 }
 
 
 .title__container {
     color: $color-light;
     letter-spacing: 0.06em;
+
+    @include media-760 {
+        max-width: 250px;
+    }
 }
 
 

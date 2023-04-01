@@ -1,6 +1,10 @@
 .help {
     background: $color-light;
     padding: 80px 0 100px;
+
+    @include media-mobile {
+        padding: 42px 0;
+    }
 }
 
 .help__title {
@@ -10,6 +14,10 @@
     text-align: center;
     letter-spacing: 0.06em;
     color: $color-dark-l;
+
+    @include media-mobile {
+        padding-bottom: 42px;
+    }
 }
 
 .help__icons-container {
@@ -19,12 +27,16 @@
     row-gap: 55px;
     column-gap: 119px;
     justify-content: center;
-    margin:0;
+    margin: 0;
 
     @include media-1250 {
         column-gap: 60px;
         justify-content: space-between;
-        padding:0;
+        padding: 0;
+    }
+
+    @include media-mobile {
+        gap: 30px;
     }
 }
 
@@ -36,56 +48,74 @@
     gap: 30px;
 
     @include media-1250 {
-       width: 170px;
+        width: 170px;
+    }
+
+    @include media-mobile {
+        width: 130px;
+        height: 87px;
+        gap: 0;
+        justify-content: space-between;
     }
 }
 
 .icon__img1 {
-    background: url(../../../assets/icon/icon-pet-food.svg);
+    background: url(../../../assets/icon/icon-pet-food.svg) ;
+    background-size: contain;
     @extend %icon__img;
 }
 
 .icon__text {
     letter-spacing: 0.06em;
     color: $color-dark-l;
+    font-size: 15px;
+    line-height: 17px;
 }
 
 .icon__img2 {
     background: url(../../../assets/icon/icon-transportation.svg);
+    background-size: contain;
     @extend %icon__img;
 }
 
 .icon__img3 {
-    background: url(../../../assets/icon/icon-toys.svg);
+    background: url(../../../assets/icon/icon-toys.svg) ;
+    background-size: contain;
     @extend %icon__img;
 }
 
 .icon__img4 {
     background: url(../../../assets/icon/icon-bowls-and-cups.svg);
+    background-size: contain;
     @extend %icon__img;
 }
 
 .icon__img5 {
     background: url(../../../assets/icon/icon-shampoos.svg);
+    background-size: contain;
     @extend %icon__img;
 }
 
 .icon__img6 {
     background: url(../../../assets/icon/icon-vitamins.svg);
+    background-size: contain;
     @extend %icon__img;
 }
 
 .icon__img7 {
     background: url(../../../assets/icon/icon-medicines.svg);
+    background-size: contain;
     @extend %icon__img;
 }
 
 .icon__img8 {
     background: url(../../../assets/icon/icon-collars-leashes.svg);
+    background-size: contain;
     @extend %icon__img;
 }
 
 .icon__img9 {
     background: url(../../../assets/icon/icon-sleeping-area.svg);
+    background-size: contain;
     @extend %icon__img;
 }

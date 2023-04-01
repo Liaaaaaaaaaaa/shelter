@@ -2,15 +2,24 @@
     padding: 30px 0;
 
     @include media-1250{
-        padding: 30px 15px;
+        padding: 30px 20px;
     }
 }
 
 .header__container {
     display: flex;
     justify-content: space-between;
+
+    @include media-760 {
+        flex-wrap: wrap;
+        align-items: center;
+    }
 }
 
 .header-nav {
     display: inline-block;
+
+    @include media-760 {
+        display: none;
+    }
 }

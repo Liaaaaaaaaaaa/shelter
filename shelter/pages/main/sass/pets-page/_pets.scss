@@ -14,6 +14,13 @@
         row-gap: 30px;
     }
 
+    @include media-760 {
+        padding: 42px 0;
+        text-align: center; 
+        align-items: center;
+        row-gap: 42px;
+    }
+
 }
 
 .pets__title {
@@ -38,6 +45,14 @@
         div:nth-child(n+7) {
             display: none;
         }
+    }
+
+    @include media-mobile {
+        div:nth-child(n+4) {
+            display: none;
+        }
+        justify-content: center;
+        padding: 0;
     }
 
 }

@@ -12,7 +12,6 @@
         justify-content: space-between;
 
         @include media-1250 {
-
             flex-direction: column;
            align-items: center;
         }
@@ -31,6 +30,10 @@
         align-items: center;
         max-width: 460px;
     }
+    @include media-760 {
+       text-align: center;
+       padding: 0 0 105px;
+            }
 }
 
 .not-only__title {
@@ -40,6 +43,11 @@
     @include media-760 {
         padding:0;
     }
+
+    @include media-mobile {
+        max-width: 200px;
+    }
+
 }
 
 

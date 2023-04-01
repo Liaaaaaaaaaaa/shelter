@@ -14,12 +14,14 @@
         flex-wrap: wrap;
         align-items: center;
     }
+
+    
 }
 
 .header-nav {
     display: inline-block;
 
-    @include media-760 {
+    @include media-mobile {
         display: none;
     }
 }

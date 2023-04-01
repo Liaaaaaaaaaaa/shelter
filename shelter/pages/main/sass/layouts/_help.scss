@@ -17,6 +17,7 @@
 
     @include media-mobile {
         padding-bottom: 42px;
+        max-width: 230px;
     }
 }
 
@@ -28,15 +29,20 @@
     column-gap: 119px;
     justify-content: center;
     margin: 0;
+   
 
     @include media-1250 {
         column-gap: 60px;
         justify-content: space-between;
-        padding: 0;
+        padding: 0 39px;
     }
 
-    @include media-mobile {
+    @include media-760 {
         gap: 30px;
+    }
+    @include media-mobile {
+        padding: 0 5px;
+        
     }
 }
 
@@ -51,7 +57,7 @@
         width: 170px;
     }
 
-    @include media-mobile {
+    @include media-760 {
         width: 130px;
         height: 87px;
         gap: 0;
@@ -68,8 +74,12 @@
 .icon__text {
     letter-spacing: 0.06em;
     color: $color-dark-l;
-    font-size: 15px;
-    line-height: 17px;
+
+    @include media-760 {
+       font-size: 15px;
+    line-height: 17px;  
+    }
+   
 }
 
 .icon__img2 {

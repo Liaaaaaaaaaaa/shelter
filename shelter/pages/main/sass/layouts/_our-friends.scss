@@ -13,7 +13,7 @@
         gap: 60px;
 
         @include media-760 {
-        row-gap: 42px;
+            row-gap: 42px;
         }
 
     }
@@ -35,7 +35,9 @@
 
     @include media-1250 {
         gap: 12px;
+    }
 
+    @include media-tablet {
         div div:last-child {
             display: none;
         }
@@ -43,15 +45,17 @@
 
 
     @include media-760 {
-        div div:nth-child(2) {
-            display: none;
-        }
-
         max-width: 270px;
         flex-wrap: wrap;
         column-gap: 80px;
         row-gap: 20px;
         justify-content: center;
+    }
+
+    @include media-mobile {
+        div div:nth-child(2) {
+            display: none;
+        }
     }
 }
 
@@ -62,6 +66,7 @@
 
     @include media-1250 {
         gap: 40px;
+        flex-wrap: wrap;
     }
 }
 

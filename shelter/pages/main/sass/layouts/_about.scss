@@ -17,13 +17,21 @@
             flex-direction: column-reverse;
             align-items: center;
             padding: 0;
-            max-width: 437px;
+            max-width: 90%;
             gap: 80px;
+        }
+
+        @include media-tablet {
+            max-width: 437px;
+        }
+
+        @include media-760 {
+            max-width: 90%;
         }
 
         @include media-mobile {
             max-width: 300px;
-            gap:42px;
+            gap: 42px;
         }
     }
 }
@@ -49,12 +57,21 @@
 
     @include media-1250 {
         padding: 0;
+        max-width: 90%;
+    }
+
+    @include media-tablet {
+        max-width: 430px;
+    }
+
+    @include media-760 {
+        max-width: 90%;
     }
 
     @include media-mobile {
-       align-items: center;
-       padding: 0 15px;
-       gap: 22px;
+        align-items: center;
+        gap: 22px;
+        max-width: 270px;
     }
 
     .about__title {
@@ -72,6 +89,15 @@
 
     .about__text {
         color: #4C4C4C;
-       text-align: justify;
+        text-align: justify;
+
+        @include media-tablet {
+            text-align: left;
+        }
+
+        @include media-mobile {
+            text-align: justify;
+        }
+
     }
 }

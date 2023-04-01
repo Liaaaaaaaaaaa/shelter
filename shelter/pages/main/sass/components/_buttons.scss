@@ -14,7 +14,7 @@
     }
 
     &_switch {
-        width: 52px;
+        min-width:52px;
         height: 52px;
         border: 2px solid $color-primary;
         border-radius: 100px;

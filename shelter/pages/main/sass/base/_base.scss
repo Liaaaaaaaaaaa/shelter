@@ -18,8 +18,17 @@ body {
     margin: auto;
 
     @include media-1250 {
+        max-width: 93%;
+    }
+
+    @include media-tablet {
         max-width: 708px;
     }
+
+    @include media-760 {
+        max-width: 92%;
+    }
+
     @include media-mobile {
         max-width: 300px;
     }
@@ -56,7 +65,7 @@ h4 {
     // @include media-mobile 760 {
     //     @include font ($family: $font-family-title, $size: 1.5rem, $line-height: 17px);
     // }
-    
+
 }
 
 h5 {

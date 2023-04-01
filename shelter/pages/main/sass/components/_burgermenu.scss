@@ -3,7 +3,7 @@
     width: 30px;
     height: 22px;
 
-    @include media-760 {
+    @include media-mobile {
         display: flex;
         align-items: center;
         justify-content: center
@@ -17,7 +17,7 @@
         content: "";
         @extend %burger__line;
         position: relative;
-        bottom: 15px;
+        bottom: 17px;
         background: inherit;
     }
 

@@ -13,7 +13,7 @@
 
         @include media-1250 {
             flex-direction: column;
-           align-items: center;
+            align-items: center;
         }
     }
 }
@@ -28,12 +28,19 @@
     @include media-1250 {
         padding: 0 0 100px;
         align-items: center;
+        max-width: 90%;
+    }
+
+    @include media-tablet {
         max-width: 460px;
     }
+
     @include media-760 {
-       text-align: center;
-       padding: 0 0 105px;
-            }
+        text-align: center;
+        padding: 0 0 105px;
+        max-width: 100%;
+    }
+
 }
 
 .not-only__title {
@@ -41,11 +48,12 @@
     color: $color-light;
 
     @include media-760 {
-        padding:0;
+        padding: 0;
     }
 
     @include media-mobile {
-        max-width: 200px;
+        max-width: 230px;
+        letter-spacing: 0.06em;
     }
 
 }
@@ -68,8 +76,8 @@
         align-self: flex-end;
     }
 
-   @include media-760 {
-    width:260px;
-    height: 271.77px;
-   }
+    @include media-760 {
+        width: 260px;
+        height: 271.77px;
+    }
 }

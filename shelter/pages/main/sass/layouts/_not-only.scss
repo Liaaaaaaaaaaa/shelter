@@ -3,13 +3,20 @@
     background-position: bottom;
     padding-top: 60px;
 
+    @include media-1250 {
+        padding-top: 30px;
+    }
+
     .not-only__container {
         display: flex;
         justify-content: space-between;
+
+        @include media-1250 {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 }
-
-
 
 .not-only__text-container {
     display: flex;
@@ -18,11 +25,37 @@
     padding: 163px 42px 243px 0;
     max-width: 502px;
 
+    @include media-1250 {
+        padding: 0 0 100px;
+        align-items: center;
+        max-width: 90%;
+    }
+
+    @include media-tablet {
+        max-width: 460px;
+    }
+
+    @include media-760 {
+        text-align: center;
+        padding: 0 0 105px;
+        max-width: 100%;
+    }
+
 }
 
 .not-only__title {
     padding-right: 150px;
     color: $color-light;
+
+    @include media-760 {
+        padding: 0;
+    }
+
+    @include media-mobile {
+        max-width: 230px;
+        letter-spacing: 0.06em;
+    }
+
 }
 
 
@@ -36,4 +69,15 @@
     background: url("../../../assets/img/start-screen-puppy.png") no-repeat;
     background-size: contain;
     width: 100%;
+
+    @include media-1250 {
+        width: 569px;
+        height: 593px;
+        align-self: flex-end;
+    }
+
+    @include media-760 {
+        width: 260px;
+        height: 271.77px;
+    }
 }

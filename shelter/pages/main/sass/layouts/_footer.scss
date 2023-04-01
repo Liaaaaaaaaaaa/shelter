@@ -1,11 +1,26 @@
 footer {
     background: radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
     padding-top: 40px;
+
+    @include media-1250 {
+        padding-top: 30px;
+    }
 }
 
 .footer__container {
     display: flex;
     column-gap: 160px;
+
+    @include media-1250 {
+        flex-wrap: wrap;
+        row-gap: 65px;
+        justify-content: center;
+        column-gap: 60px;
+    }
+    @include media-760 {
+        row-gap: 40px;
+        text-align: center;
+    }
 }
 
 .footer__item1 {
@@ -16,12 +31,28 @@ footer {
 .footer__item2 {
     max-width: 302px;
     @extend %footer__item;
+
+    @include media-760{
+        align-items: center;
+        row-gap: 40px;
+    }
+    // @include media-mobile {
+    //     display: flex;
+    // }
 }
 
 
 .title__container {
     color: $color-light;
     letter-spacing: 0.06em;
+
+    @include media-760 {
+        max-width: 250px;
+    }
+
+    @include media-mobile {
+        
+    }
 }
 
 
@@ -32,6 +63,10 @@ footer {
 
     &:hover {
         transform: scale(1.2);
+    }
+
+    @include media-760 {
+       align-self: flex-start;
     }
 }
 
@@ -44,7 +79,8 @@ footer {
 .footer__text {
     color: $color-primary;
     letter-spacing: 0.06em;
-    text-align: center;
+    text-align: start;
+
 }
 
 
@@ -65,4 +101,10 @@ footer {
     background: url(../../../assets/img/footer-puppy.png) no-repeat;
     width: 300px;
     height: 310px;
+
+    @include media-760 {
+        width: 260px;
+        height: 269px;
+        background-size: contain;
+    }
 }

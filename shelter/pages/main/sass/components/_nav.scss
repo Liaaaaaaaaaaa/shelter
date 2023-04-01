@@ -3,6 +3,12 @@
     align-items: center;
     gap: 35px;
     padding: 3px;
+
+    @include media-760 {
+        flex-wrap: wrap;
+    }
+
+
 }
 
 .nav-item_light {

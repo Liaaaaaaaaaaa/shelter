@@ -6,12 +6,22 @@
     line-height: $line-height;
 }
 
+@mixin media-1250 {
+    @media(max-width: 1250px) {
+        @content;
+    }
+}
 @mixin media-tablet {
     @media(max-width: $tablet-width) {
         @content;
     }
 }
 
+@mixin media-760 {
+    @media(max-width: 760px) {
+        @content;
+    }
+}
 
 @mixin media-mobile {
     @media (max-width: $mobile-width) {@content;}

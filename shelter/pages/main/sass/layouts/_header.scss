@@ -10,18 +10,16 @@
     display: flex;
     justify-content: space-between;
 
-    @include media-760 {
+    @media (max-width: 767.5px) {
         flex-wrap: wrap;
         align-items: center;
     }
-
-    
 }
 
 .header-nav {
     display: inline-block;
 
-    @include media-mobile {
+    @media (max-width: 767.5px){
         display: none;
     }
 }

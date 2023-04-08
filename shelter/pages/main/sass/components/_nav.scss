@@ -9,7 +9,14 @@
         
     }
 
-
+    @include media-767 {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        gap: 40px;
+        padding: 0;
+        @include font ($family: 'Arial', $style: normal, $weight: 400, $size: 32px, $line-height: 51px);
+    }
 }
 
 .nav-item_light {

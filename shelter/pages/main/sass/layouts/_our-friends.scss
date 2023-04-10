@@ -1,6 +1,9 @@
 .our-friends {
     background: $color-light-l;
     padding: 80px 0 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @include media-760 {
         padding: 42px 0;
@@ -68,7 +71,7 @@
     // transition: left ease 1s;
     position: relative;
     left: 0;
-   justify-content: center;
+    justify-content: center;
 
     @include media-tablet {
         width: 580px;
@@ -95,7 +98,7 @@
     max-width: 990px;
     height: 435px;
     // left:0;
-    top:0;
+    top: 0;
     // transition: left ease 1s;
 
 
@@ -139,7 +142,7 @@
     }
 
     &__img-Jennifer {
-        background: url(../../../assets/img/pets-jennifer.jpg);
+        background: url(../../../assets/img/pets-jennifer.jpg) no-repeat;
         @extend %friend-img;
     }
 
@@ -154,4 +157,3 @@
         color: $color-dark-l;
     }
 }
-

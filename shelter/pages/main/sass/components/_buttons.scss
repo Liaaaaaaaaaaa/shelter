@@ -13,36 +13,42 @@
         background: $color-primary;
     }
 
-    &_switch {
-        min-width:52px;
-        height: 52px;
-        border: 2px solid $color-primary;
-        border-radius: 100px;
-        text-align: center;
+    &_switchNext {
+        @extend %button_switch;
         @extend %transition;
 
         @include media-760 {
-        order: 2;
-        }
-
-        &_active {
-            background: $color-primary;
-        }
-
-        &:hover {
-            background: $color-primary-light ;
-        }
-
-        &:active {
-            background: $color-primary;
-        }
-
-        &:disabled {
-            border: 2px solid $color-dark-s;
-            color: $color-dark-s;
-            pointer-events: none;
+            order: 2;
         }
     }
+
+    &_switchPrev {
+        @extend %button_switch;
+        @extend %transition;
+
+        @include media-760 {
+            order: 2;
+        }
+    }
+
+    &_active {
+        background: $color-primary;
+    }
+
+    &:hover {
+        background: $color-primary-light ;
+    }
+
+    &:active {
+        background: $color-primary;
+    }
+
+    &:disabled {
+        border: 2px solid $color-dark-s;
+        color: $color-dark-s;
+        pointer-events: none;
+    }
+
 
     &__friend {
         width: 187px;
@@ -63,8 +69,8 @@
         @extend %transition;
     }
 
-    &:hover { 
-         border: none;
+    &:hover {
+        border: none;
         background: $color-primary-light;
         cursor: pointer;
     }

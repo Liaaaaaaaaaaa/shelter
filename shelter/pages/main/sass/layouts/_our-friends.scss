@@ -38,7 +38,7 @@
     }
 
     @include media-tablet {
-        div div:last-child {
+        div div div:last-child {
             display: none;
         }
     }
@@ -53,20 +53,63 @@
     }
 
     @include media-mobile {
-        div div:nth-child(2) {
+        div div div:nth-child(2) {
             display: none;
         }
     }
 }
 
+.friends__containers {
+    display: flex;
+    width: 990px;
+    height: 435px;
+    overflow: hidden;
+    @extend %transition;
+    // transition: left ease 1s;
+    position: relative;
+    left: 0;
+   justify-content: center;
+
+    @include media-tablet {
+        width: 580px;
+    }
+
+    @include media-mobile {
+        width: 270px;
+    }
+
+    // &:last-child {
+    //     z-index: 10;
+    // }
+    // &:first-child {
+    //     z-index: 10;
+    // }
+}
 
 .friends-container {
     display: flex;
     gap: 90px;
+    // position: relative;
+    position: absolute;
+    @extend %transition;
+    max-width: 990px;
+    height: 435px;
+    // left:0;
+    top:0;
+    // transition: left ease 1s;
+
 
     @include media-1250 {
         gap: 40px;
         flex-wrap: wrap;
+    }
+
+    @include media-tablet {
+        width: 580px;
+    }
+
+    @include media-mobile {
+        width: 270px;
     }
 }
 
@@ -90,8 +133,6 @@
         border: none;
     }
 
-
-
     &__img-Katrine {
         background: url(../../../assets/img/pets-katrine.jpg);
         @extend %friend-img;
@@ -113,3 +154,4 @@
         color: $color-dark-l;
     }
 }
+

@@ -226,19 +226,16 @@ function addInfoPet(e) {
 }
 
 function OpenCardPet(e) {
-   
-    console.log(e.target);
-    console.log(e.target.closest('.friend').className === 'friend');
-
     if (e.target.closest('.friend').className === 'friend') {
         popUp.classList.toggle('popUp_active');
         addInfoPet(e);
-        console.log('its OpenCardPet')
+        document.body.classList.toggle('lock');
     }
 }
 
 function CloseCardPet(e) {
     popUp.classList.toggle('popUp_active');
+    document.body.classList.toggle('lock');
 }
 
 
@@ -247,3 +244,17 @@ friendsContainers.addEventListener('click', OpenCardPet);
 console.log(friendsContainer);
 
 popUpClose.addEventListener('click', CloseCardPet);
+
+
+function notClickModalWindow(e) {
+    if ( popUp.classList.contains('popUp_active') && !cardAboutPet.contains(e.target) && !friendsContainers.contains(e.target)) {
+        CloseCardPet();
+    } 
+    console.log(popUp.classList.contains('popUp_active') && !cardAboutPet.contains(e.target)  )
+}
+
+
+
+document.addEventListener('click', notClickModalWindow);
+
+

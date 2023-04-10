@@ -4,6 +4,14 @@
     width: 100%;
 }
 
+%button_switch {
+    min-width:52px;
+    height: 52px;
+    border: 2px solid $color-primary;
+    border-radius: 100px;
+    text-align: center;
+}
+
 %friend-img {
     height: 270px;
     width: 270px;
@@ -38,7 +46,7 @@
 }
 
 %transition {
-    transition: all 0.3s ease-in-out;
+    transition: all 0.7s ease-in-out;
 }
 
 %text-mobile {

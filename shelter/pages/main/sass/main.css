@@ -368,8 +368,8 @@ section, main, footer, nav, article, header {
   margin-right: 20px;
 }
 
-.burger__line, .burgermenu-icon__active, .burgermenu, .footer-item__container, .addition__card-container, .friend, .friends-container, .friends__containers, .button__our-friend, .button_switchPrev, .button_switchNext, .nav-item_dark, .nav-item_light, .logo__text, .logo__title-dark, .logo__title-light, .logo {
-  transition: all 0.7s;
+.burger__line, .burgermenu-icon__active, .burgermenu, .slide-pets__container, .slider-pets__container, .footer-item__container, .addition__card-container, .friend, .friends-container, .friends__containers, .button__our-friend, .button_switchPrev, .button_switchNext, .nav-item_dark, .nav-item_light, .logo__text, .logo__title-dark, .logo__title-light, .logo {
+  transition: all 0.7s ease;
 }
 
 html {
@@ -1412,6 +1412,9 @@ footer {
 
 .pets {
   background: #F6F6F6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .pets__container {
@@ -1444,39 +1447,52 @@ footer {
 }
 
 .slider-pets__container {
+  position: relative;
+  display: flex;
+  width: 1200px;
+  height: 930px;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.slide-pets__container {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
   padding: 15px 0;
   flex-wrap: wrap;
-  max-width: 100%;
+  width: 1200px;
+  height: 930px;
   justify-content: space-between;
   row-gap: 30px;
 }
 @media (max-width: 1250px) {
-  .slider-pets__container {
+  .slide-pets__container {
     max-width: 90%;
     padding: 0 0 10px;
     column-gap: 40px;
   }
 }
 @media (max-width: 768px) {
-  .slider-pets__container {
+  .slide-pets__container {
     max-width: 580px;
   }
-  .slider-pets__container div:nth-child(n+7) {
+  .slide-pets__container div:nth-child(n+7) {
     display: none;
   }
 }
 @media (max-width: 760px) {
-  .slider-pets__container {
+  .slide-pets__container {
     max-width: 90%;
   }
 }
 @media (max-width: 320px) {
-  .slider-pets__container {
+  .slide-pets__container {
     justify-content: center;
     padding: 0;
   }
-  .slider-pets__container div:nth-child(n+4) {
+  .slide-pets__container div:nth-child(n+4) {
     display: none;
   }
 }

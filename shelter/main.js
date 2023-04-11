@@ -32,15 +32,102 @@ document.addEventListener('click', notClickBurgerIcon);
 
 
 
+//--------------POP-UP----------------
+
+
+const popUp = document.querySelector('.popUp');
+const popUpClose = document.querySelector('.popUp__close');
+const cardAboutPet = document.querySelector('.cardAboutPet');
+
+let friendsContainer = document.querySelectorAll('.friends-container');
+const sliderContainer = document.querySelector('.slider-container')
+const friendsContainers = document.querySelector('.friends__containers');
+
+
+import petsFile from './json/pets.json' assert {
+    type: "json"
+};
+
+
+const petsFileMasiive = petsFile.map(e => Object.values(e));
+
+
+function addInfoPet(e) {
+    console.log('its addinfopet')
+    let describePetOrigin = petsFileMasiive.filter(t => t[0] === e.target.closest('.friend').children[1].textContent).flat(2);
+
+    cardAboutPet.children[0].className = 'friend__img-' + describePetOrigin[0] + ' popUp__img';
+
+    let petTitle = cardAboutPet.children[1].children[0];
+
+    petTitle.children[0].textContent = describePetOrigin[0];
+    petTitle.children[1].textContent = describePetOrigin[2] + '-' + describePetOrigin[3];
+
+
+    cardAboutPet.children[1].children[1].textContent = describePetOrigin[4];
+
+    let petsList = cardAboutPet.children[1].children[2];
+    petsList.children[0].children[1].textContent = describePetOrigin[5];
+    petsList.children[1].children[1].textContent = describePetOrigin[6];
+    petsList.children[2].children[1].textContent = describePetOrigin[7];
+    petsList.children[3].children[1].textContent = describePetOrigin[8];
+}
+
+function OpenCardPet(e) {
+    if (e.target.closest('.friend').className === 'friend') {
+        popUp.classList.toggle('popUp_active');
+        addInfoPet(e);
+        document.body.classList.toggle('lock');
+    }
+}
+
+function CloseCardPet(e) {
+    popUp.classList.toggle('popUp_active');
+    document.body.classList.toggle('lock');
+}
+
+
+function notClickModalWindow(e) {
+    if (document.contains(friendsContainers)) {
+        if (popUp.classList.contains('popUp_active') && !cardAboutPet.contains(e.target) && !friendsContainers.contains(e.target)) {
+            CloseCardPet();
+        }
+    } else {
+        if (popUp.classList.contains('popUp_active') && !cardAboutPet.contains(e.target) && !sliderPetsContainer.contains(e.target)) {
+            CloseCardPet();
+        }
+    }
+
+    console.log(popUp.classList.contains('popUp_active') && !cardAboutPet.contains(e.target))
+}
+
+const sliderPetsContainer = document.querySelector('.slider-pets__container');
+
+if (document.contains(friendsContainers)) {
+    friendsContainers.addEventListener('click', OpenCardPet);
+} else {
+    sliderPetsContainer.addEventListener('click', OpenCardPet);
+}
+
+console.log(document.contains(friendsContainers));
+
+
+console.log(friendsContainer);
+
+popUpClose.addEventListener('click', CloseCardPet);
+
+document.addEventListener('click', notClickModalWindow);
+
+
+
+
 //---------SLIDER---MAIN-----------
 
 const buttonSwitchNext = document.querySelector('.button_switchNext');
 const buttonSwitchPrev = document.querySelector('.button_switchPrev');
 
 
-let friendsContainer = document.querySelectorAll('.friends-container');
-const sliderContainer = document.querySelector('.slider-container')
-const friendsContainers = document.querySelector('.friends__containers');
+
 
 
 let leftMove = 0;
@@ -54,13 +141,13 @@ function CreateBlockSliders() {
         NewBlockSlider = '<div class="friends-container "><div class="friend"> <div class="friend__img-Katrine"> </div> <h4 class="friend__name">Katrine</h4> <button class="button button__friend">Learn more</button>                                </div>                                                          <div class="friend"> <div class="friend__img-Katrine"> </div> <h4 class="friend__name">Katrine</h4> <button class="button button__friend">Learn more</button>                                </div>                                                          <div class="friend"> <div class="friend__img-Katrine"> </div> <h4 class="friend__name">Katrine</h4> <button class="button button__friend">Learn more</button></div>';
         leftMove = 990;
     } else
-    if (screen.width > 400) {
-        NewBlockSlider = '<div class="friends-container "><div class="friend"> <div class="friend__img-Katrine"> </div> <h4 class="friend__name">Katrine</h4> <button class="button button__friend">Learn more</button>                                </div>                                                          <div class="friend"> <div class="friend__img-Katrine"> </div> <h4 class="friend__name">Katrine</h4> <button class="button button__friend">Learn more</button>                                </div>                                                          <div class="friend"> <div class="friend__img-Katrine"> </div> <h4 class="friend__name">Katrine</h4> <button class="button button__friend">Learn more</button></div>';
-        leftMove = 580;
-    } else {
-        NewBlockSlider = '<div class="friends-container "><div class="friend"> <div class="friend__img-Katrine"> </div> <h4 class="friend__name">Katrine</h4> <button class="button button__friend">Learn more</button>                                </div>                                                          <div class="friend"> <div class="friend__img-Katrine"> </div> <h4 class="friend__name">Katrine</h4> <button class="button button__friend">Learn more</button> </div>';
-        leftMove = 270;
-    }
+        if (screen.width > 400) {
+            NewBlockSlider = '<div class="friends-container "><div class="friend"> <div class="friend__img-Katrine"> </div> <h4 class="friend__name">Katrine</h4> <button class="button button__friend">Learn more</button>                                </div>                                                          <div class="friend"> <div class="friend__img-Katrine"> </div> <h4 class="friend__name">Katrine</h4> <button class="button button__friend">Learn more</button>                                </div>                                                          <div class="friend"> <div class="friend__img-Katrine"> </div> <h4 class="friend__name">Katrine</h4> <button class="button button__friend">Learn more</button></div>';
+            leftMove = 580;
+        } else {
+            NewBlockSlider = '<div class="friends-container "><div class="friend"> <div class="friend__img-Katrine"> </div> <h4 class="friend__name">Katrine</h4> <button class="button button__friend">Learn more</button>                                </div>                                                          <div class="friend"> <div class="friend__img-Katrine"> </div> <h4 class="friend__name">Katrine</h4> <button class="button button__friend">Learn more</button> </div>';
+            leftMove = 270;
+        }
 
 
     friendsContainers.insertAdjacentHTML('beforeend', NewBlockSlider);
@@ -84,14 +171,6 @@ CreateBlockSliders();
 //----------Random --- cards---pets----------------
 
 
-
-import petsFile from './json/pets.json' assert {
-    type: "json"
-};
-
-
-
-const petsFileMasiive = petsFile.map(e => Object.values(e));
 
 
 function friendsContainerCenterNamePets() {
@@ -194,67 +273,5 @@ function rightSlider() {
 
 buttonSwitchNext.addEventListener('click', leftSlider);
 buttonSwitchPrev.addEventListener('click', rightSlider);
-
-
-//--------------POP-UP----------------
-
-
-const popUp = document.querySelector('.popUp');
-const popUpClose = document.querySelector('.popUp__close');
-const cardAboutPet = document.querySelector('.cardAboutPet');
-
-
-function addInfoPet(e) {
-    console.log('its addinfopet')
-    let describePetOrigin = petsFileMasiive.filter(t => t[0] === e.target.closest('.friend').children[1].textContent).flat(2);
-
-    cardAboutPet.children[0].className = 'friend__img-' + describePetOrigin[0] + ' popUp__img';
-
-    let petTitle = cardAboutPet.children[1].children[0];
-
-    petTitle.children[0].textContent = describePetOrigin[0];
-    petTitle.children[1].textContent = describePetOrigin[2] + '-' + describePetOrigin[3];
-
-
-    cardAboutPet.children[1].children[1].textContent = describePetOrigin[4];
-
-    let petsList = cardAboutPet.children[1].children[2];
-    petsList.children[0].children[1].textContent = describePetOrigin[5];
-    petsList.children[1].children[1].textContent = describePetOrigin[6];
-    petsList.children[2].children[1].textContent = describePetOrigin[7];
-    petsList.children[3].children[1].textContent = describePetOrigin[8];
-}
-
-function OpenCardPet(e) {
-    if (e.target.closest('.friend').className === 'friend') {
-        popUp.classList.toggle('popUp_active');
-        addInfoPet(e);
-        document.body.classList.toggle('lock');
-    }
-}
-
-function CloseCardPet(e) {
-    popUp.classList.toggle('popUp_active');
-    document.body.classList.toggle('lock');
-}
-
-
-friendsContainers.addEventListener('click', OpenCardPet);
-
-console.log(friendsContainer);
-
-popUpClose.addEventListener('click', CloseCardPet);
-
-
-function notClickModalWindow(e) {
-    if ( popUp.classList.contains('popUp_active') && !cardAboutPet.contains(e.target) && !friendsContainers.contains(e.target)) {
-        CloseCardPet();
-    } 
-    console.log(popUp.classList.contains('popUp_active') && !cardAboutPet.contains(e.target)  )
-}
-
-
-
-document.addEventListener('click', notClickModalWindow);
 
 

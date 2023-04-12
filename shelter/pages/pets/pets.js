@@ -23,19 +23,19 @@
 //-----------------PAGINATION--------------------
 const sliderPetsContainer = document.querySelector('.slider-pets__container');
 const paginationContainer = document.querySelector('.pagination__container');
-// const slidePetsContainer = document.querySelector
+const slidePetsContainer = document.querySelector(".slide-pets__container");
 
 let numberslide = 0;
 let leftMoveSlide = 0;
 
-console.log(sliderPetsContainer);
+// console.log(sliderPetsContainer);
 
 function CreatePetsContainer() {
-    let newSlidePetsContainer = '<div class="slide-pets__container"> <div class="friend"><div class="friend__img-Katrine"></div><h4 class="friend__name">Katrine</h4><button class="button button__friend">Learn more</button></div><div class="friend"><div class="friend__img-Jennifer"></div><h4 class="friend__name">Jennifer</h4><button class="button button__friend">Learn more</button></div>                         <div class="friend"> <div class="friend__img-Woody"></div><h4 class="friend__name">Woody</h4><button class="button button__friend">Learn more</button></div><div class="friend"><div class="friend__img-Sophia"></div> <h4 class="friend__name">Sophia</h4><button class="button button__friend">Learn more</button></div><div class="friend"><div class="friend__img-Timmy"></div><h4 class="friend__name">Timmy</h4><button class="button button__friend">Learn more</button></div><div class="friend"><div class="friend__img-Charly"></div><h4 class="friend__name">Charly</h4><button class="button button__friend">Learn more</button></div><div class="friend"><div class="friend__img-Scarlett"></div><h4 class="friend__name">Scarlett</h4><button class="button button__friend">Learn more</button></div><div class="friend"><div class="friend__img-Freddie"></div><h4 class="friend__name">Freddie</h4><button class="button button__friend">Learn more</button></div>';
+    let newSlidePetsContainer = slidePetsContainer.cloneNode(true);
 
-    sliderPetsContainer.insertAdjacentHTML('beforeend', newSlidePetsContainer);
+    // console.log(newSlidePetsContainer);
 
-
+    sliderPetsContainer.insertAdjacentElement('beforeend', newSlidePetsContainer);
 }
 
 CreatePetsContainer();
@@ -46,7 +46,7 @@ CreatePetsContainer();
 
 
 
-console.log(sliderPetsContainer.children.length);
+// console.log(sliderPetsContainer.children.length);
 
 let stepMove = 0;
 let numberSlidesNeed = 0;
@@ -86,22 +86,20 @@ for (let i = 0; i < sliderPetsContainer.children.length; i++) {
     sliderPetsContainer.children[i].style.left = stepMove * i + 'px';
 }
 
-console.log(paginationContainer)
-console.log(paginationContainer.children[3]);
+// console.log(paginationContainer)
+// console.log(paginationContainer.children[3]);
 
 function ClickPaginationNext(e) {
 
     Array.from(paginationContainer.children).forEach(e => e.children[0].disabled = '');
 
-
-
-    console.log(paginationContainer.children[3]);
-    console.log(e.target);
+    // console.log(paginationContainer.children[3]);
+    // console.log(e.target);
 
     if (e.target === paginationContainer.children[3].children[0]) {
 
-        console.log(screen.width)
-        console.log(stepMove)
+        // console.log(screen.width)
+        // console.log(stepMove)
 
         for (let i = 0; i < sliderPetsContainer.children.length; i++) {
             let NumberLeftSlide = sliderPetsContainer.children[i].style.left;
@@ -119,9 +117,9 @@ function ClickPaginationNext(e) {
 
             console.log(Math.sign(parseInt(NumberLeftSlide)));
             if (Math.sign(parseInt(NumberLeftSlide)) === '1') {
-                sliderPetsContainer.children[i].style.left = -((numberSlidesNeed -1 - i) * stepMove) + 'px';
+                sliderPetsContainer.children[i].style.left = -((numberSlidesNeed - 1 - i) * stepMove) + 'px';
             } else {
-                sliderPetsContainer.children[i].style.left = -((numberSlidesNeed -1 - i) * stepMove) + 'px';
+                sliderPetsContainer.children[i].style.left = -((numberSlidesNeed - 1 - i) * stepMove) + 'px';
             }
 
             paginationContainer.children[2].children[0].textContent = numberSlidesNeed;
@@ -134,7 +132,6 @@ function ClickPaginationNext(e) {
 
         paginationContainer.children[3].children[0].disabled = 'true';
         // paginationContainer.children[3].removeEventListener('click', ClickPaginationNext, false);
-
 
         paginationContainer.children[4].children[0].disabled = 'true';
         // paginationContainer.children[4].removeEventListener('click', ClickPaginationNext, false);
@@ -153,7 +150,6 @@ paginationContainer.children[4].addEventListener('click', ClickPaginationNext);
 function ClickPaginationPrev(e) {
 
     Array.from(paginationContainer.children).forEach(e => e.children[0].disabled = '');
-
 
     if (e.target === paginationContainer.children[1].children[0]) {
 
@@ -193,4 +189,74 @@ paginationContainer.children[0].addEventListener('click', ClickPaginationPrev);
 paginationContainer.children[1].addEventListener('click', ClickPaginationPrev);
 
 
+//-----Massive---pets--------------------------
+
+import petsFile from '../../json/pets.json' assert {
+    type: "json"
+};
+
+let MassivePetFile = petsFile.map(e => Object.values(e));
+let MassivePetsPagination = MassivePetFile.concat(MassivePetFile).concat(MassivePetFile).concat(MassivePetFile).concat(MassivePetFile).concat(MassivePetFile);
+
+// console.log(MassivePetsPagination);
+
+
+function petsContainerCenterNamePets() {
+    return Array.from(sliderPetsContainer.children[1].children).map(e => e.children[1].textContent);
+}
+
+// console.log(petsContainerCenterNamePets() );
+
+function randomPets() {
+    return Math.trunc(Math.random() * (8 - 0) + 0)
+};
+
+// console.log(randomPets())
+
+// function petsFileSelected() {
+//     return MassivePetFile.filter(elem => !friendsContainerCenterNamePets().includes(elem[0]));
+// }
+
+
+function randomPetsNumber() {
+    let randomPetsEight = new Set();
+    for (let i = 0; randomPetsEight.size < 8; i++) {
+        randomPetsEight.add(randomPets());
+    }
+    return randomPetsEight;
+}
+
+// console.log(randomPetsNumber())
+
+// numberSlidesNeed
+
+// const friendsInContainer = friendsContainers.children[0];
+// const friendsCountInConteiner = friendsContainers.children[0].children;
+
+// const sliderPetsContainer = document.querySelector('.slider-pets__container');
+// const paginationContainer = document.querySelector('.pagination__container');
+// const slidePetsContainer = document.querySelector(".slide-pets__container");
+
+
+function AddNewPets(numberFriendsContainer) {
+    let a = MassivePetFile;
+    let b = Array.from(randomPetsNumber());
+
+    console.log(MassivePetFile);
+
+    // console.log(  sliderPetsContainer.children[numberFriendsContainer].children[0].children[0].className);
+    // console.log(sliderPetsContainer.children[0].children[0].children[1].innerText);
+    console.log(randomPetsNumber())
+    console.log(((a[b[7]])));
+
+    for (let i = 0; i < slidePetsContainer.children.length ; i++) {
+        sliderPetsContainer.children[numberFriendsContainer].children[i].children[0].className = 'friend__img-' + ((a[b[i]][0]));
+        sliderPetsContainer.children[numberFriendsContainer].children[i].children[1].innerText = (a[b[i]][0]);
+    }
+}
+console.log(slidePetsContainer.children.length);
+
+for(let i = 1; i < slidePetsContainer.children.length; i++){
+    AddNewPets(i);
+}
 

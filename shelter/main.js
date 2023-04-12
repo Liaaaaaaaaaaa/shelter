@@ -7,7 +7,7 @@ const navItem = nav.children;
 const html = document.querySelector('html');
 const headerContainer = document.querySelector('.header__container');
 const WidthForBurgermenu = 768;
-console.log(navItem);
+
 
 
 function burgermenuToggle() {
@@ -33,7 +33,9 @@ document.addEventListener('click', notClickBurgerIcon);
 
 
 //--------------POP-UP----------------
-
+import petsFile from './json/pets.json' assert {
+    type: "json"
+};
 
 const popUp = document.querySelector('.popUp');
 const popUpClose = document.querySelector('.popUp__close');
@@ -42,18 +44,12 @@ const cardAboutPet = document.querySelector('.cardAboutPet');
 let friendsContainer = document.querySelectorAll('.friends-container');
 const sliderContainer = document.querySelector('.slider-container')
 const friendsContainers = document.querySelector('.friends__containers');
-
-
-import petsFile from './json/pets.json' assert {
-    type: "json"
-};
-
-
 const petsFileMasiive = petsFile.map(e => Object.values(e));
 
 
+
+
 function addInfoPet(e) {
-    console.log('its addinfopet')
     let describePetOrigin = petsFileMasiive.filter(t => t[0] === e.target.closest('.friend').children[1].textContent).flat(2);
 
     cardAboutPet.children[0].className = 'friend__img-' + describePetOrigin[0] + ' popUp__img';
@@ -97,8 +93,6 @@ function notClickModalWindow(e) {
             CloseCardPet();
         }
     }
-
-    console.log(popUp.classList.contains('popUp_active') && !cardAboutPet.contains(e.target))
 }
 
 const sliderPetsContainer = document.querySelector('.slider-pets__container');
@@ -109,10 +103,7 @@ if (document.contains(friendsContainers)) {
     sliderPetsContainer.addEventListener('click', OpenCardPet);
 }
 
-console.log(document.contains(friendsContainers));
 
-
-console.log(friendsContainer);
 
 popUpClose.addEventListener('click', CloseCardPet);
 
@@ -133,8 +124,6 @@ const buttonSwitchPrev = document.querySelector('.button_switchPrev');
 let leftMove = 0;
 
 function CreateBlockSliders() {
-    console.log(screen.width > 768);
-
     let NewBlockSlider = '';
 
     if (screen.width > 800) {
@@ -149,8 +138,8 @@ function CreateBlockSliders() {
             leftMove = 270;
         }
 
-
-    friendsContainers.insertAdjacentHTML('beforeend', NewBlockSlider);
+        if(document.contains(friendsContainers)){
+            friendsContainers.insertAdjacentHTML('beforeend', NewBlockSlider);
     friendsContainers.insertAdjacentHTML('afterbegin', NewBlockSlider);
 
     friendsContainers.children[1].style.right = '0px';
@@ -158,8 +147,7 @@ function CreateBlockSliders() {
 
     friendsContainers.children[1].style.left = '0px';
     friendsContainers.children[2].style.left = leftMove + 'px';
-
-
+        }
 }
 
 CreateBlockSliders();

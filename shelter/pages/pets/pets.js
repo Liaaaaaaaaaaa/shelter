@@ -171,7 +171,7 @@ function ClickPaginationPrev(e) {
             sliderPetsContainer.children[i].style.left = i * stepMove + 'px';
         }
 
-        paginationContainer.children[2].children[0].textContent = '0';
+        paginationContainer.children[2].children[0].textContent = '1';
     }
 
 

@@ -79,10 +79,10 @@ h5 {
     // letter-spacing: 0.06em;
 }
 
-
 .paragraph-l {
     @include font ($family: $font-family-p, $size: 1.5rem, $line-height: 24px);
 }
+
 
 .paragraph-s {
     @include font ($family: $font-family-p, $size: 1.2rem, $line-height: 18px, $weight: 400, $style: italic);
@@ -92,6 +92,7 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
 
 li {
     list-style: none;

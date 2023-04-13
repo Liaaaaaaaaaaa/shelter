@@ -584,10 +584,31 @@ li {
   border-bottom: 3px solid #F1CDB3;
 }
 
+@media (max-width: 767.5px) {
+  nav ul li a {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    gap: 40px;
+    padding: 0;
+    font-family: "Arial";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 51px;
+    color: #CDCDCD;
+  }
+}
+
 .link_nav-active_dark {
   color: #292929;
   border-bottom: 3px solid #F1CDB3;
   pointer-events: none;
+}
+@media (max-width: 767.5px) {
+  .link_nav-active_dark a {
+    color: #FAFAFA;
+  }
 }
 
 .button {
@@ -688,6 +709,7 @@ li {
     align-items: center;
     justify-content: center;
     transition: right 0.5s ease-in-out;
+    z-index: 9;
   }
 }
 
@@ -977,8 +999,8 @@ li {
   gap: 90px;
   position: absolute;
   max-width: 990px;
-  height: 435px;
   top: 0;
+  flex-wrap: wrap;
 }
 @media (max-width: 1250px) {
   .friends-container {
@@ -989,6 +1011,11 @@ li {
 @media (max-width: 768px) {
   .friends-container {
     width: 580px;
+  }
+}
+@media (max-width: 760px) {
+  .friends-container {
+    width: 90%;
   }
 }
 @media (max-width: 320px) {

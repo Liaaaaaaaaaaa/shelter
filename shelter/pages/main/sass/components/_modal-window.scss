@@ -1,0 +1,192 @@
+.popUp {
+    display: none;
+    position: absolute;
+    width: 952px;
+    height: 552px;
+    margin: 0 0 52px 52px;
+
+    @include media-tablet {
+        width: 682px;
+        height: 402px;
+    }
+
+    @include media-mobile {
+        width: 271px;
+        height: 393px;
+        margin: 0;
+        left: 40px;
+        margin-bottom: 50px;
+    }
+}
+
+
+.popUp_active {
+    display: flex;
+}
+
+
+.popUp__container {
+    display: flex;
+    position: relative;
+    flex-direction: column-reverse;
+    width: 100%;
+    padding-right: 10px;
+}
+
+.cardAboutPet {
+    display: flex;
+    max-width: 900px;
+    max-height: 500px;
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+    box-shadow: 0 0 0 100000px rgba(41, 41, 41, 0.6);
+    border-radius: 9px;
+    background: $color-light-s ;
+    justify-content: space-between;
+
+    @include media-tablet {
+        width: 630px;
+        height: 350px;
+    }
+
+    @include media-mobile {
+        width: 240px;
+        height: 341px;
+    }
+}
+
+
+.popUp__img {
+    width: 500px;
+    height: 500px;
+    border-radius: 9px 0px 0px 9px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+
+    @include media-tablet {
+        width: 350px;
+        height: 350px;
+    }
+
+    @include media-mobile {
+        display: none;
+    }
+}
+
+.cardAboutPet__describe {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 20px 0 0;
+    max-width: 351px;
+    row-gap: 40px;
+    color: $color-text-dark;
+    letter-spacing: 0.06em;
+
+    @include media-tablet {
+        padding: 10px 9px 0 10px;
+        row-gap: 20px;
+        max-width: 280px;
+    }
+
+    @include media-mobile {
+        padding: 10px;
+
+    }
+}
+
+.cardAboutPet__title {
+    margin-bottom: 10px;
+    font-size: 3.5rem;
+
+    @include media-mobile {
+        text-align: center;
+    }
+
+}
+
+.cardAboutPet__subtitle {
+    font-size: 2.5rem;
+
+    @include media-mobile {
+        text-align: center;
+        font-size: 2rem;
+    }
+}
+
+.cardAboutPet__text {
+    font-size: 2rem;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17px;
+    letter-spacing: 0.06em;
+    text-align: justify;
+
+    @include media-tablet {
+        font-size: 1.3rem;
+        line-height: 14px;
+
+        letter-spacing: 0.06em;
+    }
+
+    @include media-mobile {
+        font-size: 13px;
+    }
+
+}
+
+.cardAboutPet__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 0;
+    font-size: 15px;
+    line-height: 17px;
+    letter-spacing: 0.06em;
+    margin: 0 0 0 10px;
+
+    li {
+        list-style-type: disc;
+        color: $color-primary;
+
+        span {
+            color: $color-text-dark;
+        }
+    }
+
+    @include media-mobile {
+        font-size: 13px;
+        row-gap: 5px;
+    }
+}
+
+// .age {
+// }
+// .inoculations {
+// }
+// .diseases {
+// }
+// .parasites {
+// }
+.popUp__close {
+    width: 52px;
+    height: 52px;
+    border: 2px solid $color-primary;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    font-size: 22px;
+    font-weight: 500;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+
+    &:hover {
+        background: $color-primary-light;
+    }
+    &:active {
+        background: $color-primary;
+    }
+}

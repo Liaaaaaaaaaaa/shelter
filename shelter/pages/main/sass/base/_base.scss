@@ -1,0 +1,99 @@
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+   
+}
+
+body {
+    font-family: 'Arial', Verdana, sans-serif;
+}
+
+.lock {
+    overflow: hidden;
+}
+
+.body_background {
+    background-image: $background-start-screen-gradient;
+    // background-image: url(../../../../assets/icon/noise_transparent@2x.png);
+
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: auto;
+
+    @include media-1250 {
+        max-width: 93%;
+    }
+
+    @include media-tablet {
+        max-width: 708px;
+   
+    }
+
+    @include media-760 {
+        max-width: 92%;
+    }
+
+    @include media-mobile {
+        max-width: 300px;
+    }
+}
+
+h1 {
+    @include font($family: $font-family-title, $size: 3.2rem, $line-height: 35px);
+}
+
+h2 {
+    @include font($family: $font-family-title, $size: 4.4rem, $line-height: 57px);
+    // letter-spacing: 0.06em;
+
+    @include media-mobile {
+        font-size: 2.5rem;
+        line-height: 32px;
+    }
+}
+
+
+
+h3 {
+    @include font($family: $font-family-title, $size: 3.5rem, $line-height: 45px);
+    // letter-spacing: 0.06em;
+
+    @include media-760 {
+        @include font($family: $font-family-title, $size: 2.5rem, $line-height: 32px);
+    }
+}
+
+h4 {
+    @include font ($family: $font-family-title, $size: 2rem, $line-height: 23px);
+
+    // @include media-mobile 760 {
+    //     @include font ($family: $font-family-title, $size: 1.5rem, $line-height: 17px);
+    // }
+
+}
+
+h5 {
+    @include font($family: $font-family-title, $size: 1.5rem, $line-height: 17px);
+    // letter-spacing: 0.06em;
+}
+
+.paragraph-l {
+    @include font ($family: $font-family-p, $size: 1.5rem, $line-height: 24px);
+}
+
+
+.paragraph-s {
+    @include font ($family: $font-family-p, $size: 1.2rem, $line-height: 18px, $weight: 400, $style: italic);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+li {
+    list-style: none;
+}

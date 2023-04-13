@@ -1,0 +1,24 @@
+{
+  "name": "shelter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "module": "commonjs",
+  "scripts": {
+    "style": "sass --watch shelter/pages/main/sass/main.scss shelter/pages/main/sass/main.css",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "type": "module",
+    "module": "commonjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Liaaaaaaaaaaa/shelter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Liaaaaaaaaaaa/shelter/issues"
+  },
+  "homepage": "https://github.com/Liaaaaaaaaaaa/shelter#readme"
+}

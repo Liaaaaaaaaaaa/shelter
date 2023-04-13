@@ -1,0 +1,169 @@
+.our-friends {
+    background: $color-light-l;
+    padding: 80px 0 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include media-760 {
+        padding: 42px 0;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+
+        @include media-760 {
+            row-gap: 42px;
+        }
+
+    }
+
+
+}
+
+.our-friends__title {
+    max-width: 400px;
+    letter-spacing: 0.06em;
+    color: $color-dark-l;
+    text-align: center;
+}
+
+.slider-container {
+    display: flex;
+    gap: 53px;
+    align-items: center;
+
+    @include media-1250 {
+        gap: 12px;
+    }
+
+    @include media-tablet {
+        div div div:last-child {
+            display: none;
+        }
+    }
+
+
+    @include media-760 {
+        max-width: 270px;
+        flex-wrap: wrap;
+        column-gap: 80px;
+        row-gap: 20px;
+        justify-content: center;
+    }
+
+    @include media-mobile {
+        div div div:nth-child(2) {
+            display: none;
+        }
+    }
+}
+
+.friends__containers {
+    display: flex;
+    width: 990px;
+    height: 435px;
+    overflow: hidden;
+    @extend %transition;
+    // transition: left ease 1s;
+    position: relative;
+    left: 0;
+    justify-content: center;
+
+    // @include media-1250 {
+    //     width: 690px;
+    // }
+
+    @include media-tablet {
+        width: 580px;
+    }
+
+    @include media-mobile {
+        width: 270px;
+    }
+
+    // &:last-child {
+    //     z-index: 10;
+    // }
+    // &:first-child {
+    //     z-index: 10;
+    // }
+}
+
+.friends-container {
+    display: flex;
+    gap: 90px;
+    // position: relative;
+    position: absolute;
+    @extend %transition;
+    max-width: 990px;
+    // height: 435px;
+    // left:0;
+    top: 0;
+    flex-wrap: wrap;
+    // transition: left ease 1s;
+
+
+    @include media-1250 {
+        gap: 40px;
+        flex-wrap: wrap;
+        // width: 80%;
+    }
+
+    @include media-tablet {
+        width: 580px;
+    }
+
+    @include media-760 {
+        width: 90%;
+    }
+
+    @include media-mobile {
+        width: 270px;
+    }
+}
+
+.friend {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border-radius: 9px;
+    background: $color-light-s;
+    align-items: center;
+    padding-bottom: 30px;
+    cursor: pointer;
+    @extend %transition;
+
+    &:hover {
+        background: $color-light;
+    }
+
+    &:hover .button__friend {
+        background: $color-primary-light;
+        border: none;
+    }
+
+    &__img-Katrine {
+        background: url(../../../assets/img/pets-katrine.jpg);
+        @extend %friend-img;
+    }
+
+    &__img-Jennifer {
+        background: url(../../../assets/img/pets-jennifer.jpg) no-repeat;
+        @extend %friend-img;
+    }
+
+    &__img-Woody {
+        background: url(../../../assets/img/pets-woody.jpg);
+        @extend %friend-img;
+    }
+
+
+    &__name {
+        letter-spacing: 0.06em;
+        color: $color-dark-l;
+    }
+}

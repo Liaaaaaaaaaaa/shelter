@@ -1,0 +1,38 @@
+// normalize 
+@import "abstract/normalize";
+
+//abstract
+@import "abstract/background";
+@import "abstract/width";
+@import "abstract/constants";
+@import "abstract/mixins";
+@import "abstract/placeholders";
+
+//base
+@import "base/base";
+
+//components
+@import "components/logo";
+@import "components/nav";
+@import "components/buttons";
+
+
+//layouts
+@import "layouts/header";
+@import "layouts/not-only";
+@import "layouts/about";
+@import "layouts/our-friends";
+@import "layouts/help";
+@import "layouts/addition";
+@import "layouts/footer";
+
+
+// --pages ---PETS--------------------------
+@import "pets-page/pets";
+
+
+//---burgermenu--------------------
+@import "components/burgermenu";
+
+
+@import "components/modal-window";

@@ -1,0 +1,82 @@
+.button {
+    background: inherit;
+    border-radius: 100px;
+    @include font($family: $font-family-title, $size: 17px, $line-height: 22px);
+    color: $color-dark-3xl;
+    transition: background 0.3s ease-in-out;
+
+    &__not-only {
+        width: 207px;
+        height: 52px;
+        padding: 15px 45px;
+        border: none;
+        background: $color-primary;
+    }
+
+    &_switchNext {
+        @extend %button_switch;
+        @extend %transition;
+
+        @include media-760 {
+            order: 2;
+        }
+    }
+
+    &_switchPrev {
+        @extend %button_switch;
+        @extend %transition;
+
+        @include media-760 {
+            order: 2;
+        }
+    }
+
+    &_active {
+        background: $color-primary;
+    }
+
+    &:hover {
+        background: $color-primary-light ;
+    }
+
+    &:active {
+        background: $color-primary;
+    }
+
+    &:disabled {
+        border: 2px solid $color-dark-s;
+        color: $color-dark-s;
+        pointer-events: none;
+    }
+
+
+    &__friend {
+        width: 187px;
+        height: 52px;
+        border: 2px solid $color-primary;
+        outline: none;
+        letter-spacing: 0.06em;
+        // @extend %transition; 
+
+    }
+
+    &__our-friend {
+        width: 261px;
+        height: 52px;
+        background: $color-primary;
+        border: none;
+        letter-spacing: 0.06em;
+        @extend %transition;
+    }
+
+    &:hover {
+        border: none;
+        background: $color-primary-light;
+        cursor: pointer;
+    }
+}
+
+// .button__friend:hover {
+//     border:none;
+//     border:  $color-primary-light;
+// }
